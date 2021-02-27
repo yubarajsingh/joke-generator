@@ -20,6 +20,7 @@ newJokeBtn.addEventListener('click',getJoke)
 function getPunchline() {
     punchlineDiv.innerHTML = punchline;
     punchlineDiv.classList.add('bubble');
+    punchlineDiv.style="color:#40D035"
     punchlineBtn.classList.toggle('hidden');
     newJokeBtn.classList.toggle('hidden');
 }
@@ -34,7 +35,7 @@ async function getJoke() {
     const joke = await jokePromise.json();
     
     // Get the setup from the joke and insert it into the setupDiv element
-    setupDiv.innerHTML = joke[0].setup+"</br>";
+    setupDiv.innerHTML = joke[0].setup+ "</br>";
     
     // Create a global variable called punchline which will store the current punchline and will be updated with each new joke
     // Assign the current jokes punchline to the punchline variable.
