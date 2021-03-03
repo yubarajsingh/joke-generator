@@ -3,8 +3,13 @@ body {
   background: #002B36;
   font-family: 'DotGothic16', sans-serif;
   font-size: 1.5rem;
-  padding: 10px 100px 10px 10px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
+
 .circles{
   height: 1rem;
  
@@ -28,23 +33,22 @@ body {
 .green{
   background-color: #16C732;
 }
-.joke{
-  margin: 0 10%;
-  
 
-}
 
 .container{
-  width: 80%;
-  background: #000000;
+  
+  background: #0D1117;
   height: 90vh;
-
+  
   border-radius:0 0 2rem 0;
+  
 }
+
 
 h1 {
   position: relative;
   color: white;
+  margin-bottom:5px;
   
 }
 h1::before {
@@ -53,8 +57,9 @@ h1::before {
   height: 6px;
   width: 100%;
   background: rgb(102, 101, 101);
-  bottom: 4px;
+  bottom: 0px;
   z-index: 0;
+ 
 }
 
 button {
@@ -76,13 +81,16 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 90%;
+  overflow: hidden;
+  
 }
 
 .bubble {
   display: block;
   
   position: relative;
-  
+  animation: typing 5s steps(30, end), blink .75s step-end infinite;
   
   /* border: 3px solid black; */
 
@@ -93,6 +101,29 @@ button {
   content: ">> ";
 }
 
+.center{
+  margin-top:1em
+}
 .content{
-  padding-left: 1em;
+  padding: 0 1em;
+
+}
+
+
+@media (max-width:460px)
+{
+  .body{
+    font-size: 16px;
+  }
+  .container{
+    height: 70vh;
+  }
+
+  h1{
+    font-size: 2em;
+  }
+  .content{
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
 }
